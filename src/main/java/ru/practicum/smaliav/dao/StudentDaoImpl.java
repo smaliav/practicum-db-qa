@@ -26,8 +26,8 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public StudentWithGroupName getByIdWithGroupName(int id) {
-        return jdbcTemplate.queryForObject(
-            "SELECT s.id   AS id,\n" +
+        return jdbcTemplate.queryForObject("" +
+                "SELECT s.id   AS id,\n" +
                 "       s.name AS name,\n" +
                 "       g.name AS group_name\n" +
                 "FROM student AS s\n" +
